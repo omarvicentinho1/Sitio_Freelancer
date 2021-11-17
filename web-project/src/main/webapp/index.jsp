@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Hello World!</h2>
+<h2>Sitio Freelancer desde Jenkins con uso de Maven!</h2>
 </body>
 </html>
