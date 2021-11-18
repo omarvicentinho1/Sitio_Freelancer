@@ -1,0 +1,21 @@
+pipeline {
+  agent any
+  stages {
+    stage('Init') {
+      steps {
+        echo 'Hello'
+        echo 'We are starting the Testing'
+      }
+    }
+    stage('Build') {
+      steps {
+        echo 'Building Sample Maven Project'
+      }
+    }
+    stage('Deploy') {
+      steps {
+        echo 'Deploying in Staging Area'
+      }
+    }
+  }
+}
