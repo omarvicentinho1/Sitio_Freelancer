@@ -4,23 +4,30 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="css/normalize.css" as="style"><!--Resetea completo el CSS-->
+  <link rel="stylesheet" href="css/normalize.css"><!--Normalize debe de ir primero que todos los estilos-->
+  <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet"><!--Al cargar una fuente externa, se coloca arriba de las hojas de estilo-->
+  <link rel="preload" href="css/styles.css" as="style"><!--Hacer que la hoja de estilo cargue mas rapido-->
+  <link rel="stylesheet" href="css/styles.css"><!--Cargar hojas de estilo-->
   <title>Diseñador Freelancer</title>
 </head>
 <body><!--h1-h6, siendo h1 de mayor importancia para el contenido-->
 
   <header>
-    <h1>Omar Cordova Vicenteño Freelancer</h1><!--Solo se puede tener un h1 por pagina-->
+    <h1 class="titulo">Omar Cordova Vicenteño <span>Freelancer</span></h1><!--Solo se puede tener un h1 por pagina-->
   </header>
 
-  <nav><!--Se utiliza para crear menus de 1 nivel-->
-    <a href="#">Inicio</a><!--Enlaces-->
-    <a href="#">Sobre Mi</a><!--Shift + Alt + Flecha_abajo: para copiar lineas de codigo hacia abajo-->
-    <a href="#">Clientes</a>
-    <a href="#">Contacto</a>
-  </nav>
+  <div class="nav-bg">
+    <nav class="navegacion-principal contenedor"><!--Se utiliza para crear menus de 1 nivel-->
+      <a href="#">Inicio</a><!--Enlaces-->
+      <a href="#">Sobre Mi</a><!--Shift + Alt + Flecha_abajo: para copiar lineas de codigo hacia abajo-->
+      <a href="#">Clientes</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </div>
 
   <section><!--Se utiliza cuando se tiene h2, h3, h4; excepto con la etiqueta main-->
-    <h2>Diseño y Desarrollo Web Freelancer</h2><!--Se pueden repetir-->
+    <h2 class="titulo">Diseño y Desarrollo Web <span>Freelancer</span></h2><!--Se pueden repetir-->
     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="88" height="88" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffc107" fill="none" stroke-linecap="round" stroke-linejoin="round">
       <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
       <circle cx="12" cy="11" r="3" />

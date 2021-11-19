@@ -1,0 +1,58 @@
+/* pseudoselectores: elementos que no existen en HTML */
+:root {
+  --blanco: #ffffff;
+  --oscuro: #212121;  /* Custom properties */
+  --primario: #ffc107;  /* variables en CSS */
+  --secundario: #0097a7;
+  --gris: #757575;
+}
+/* Hack para reiniciar tamaño del html en general */
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 16px;  /* 1rem = 10px */
+  font-family: 'Krub', sans-serif;  /* font-weight: 400(normal), 700(bold) */
+}
+.titulo { /* Selector de clase */
+  text-align: center;
+  font-size: 3.8rem;
+}
+.titulo span {
+  font-size: 2rem;
+}
+.contenedor {
+  width: 120rem;
+  margin: 0 auto; /* Acota los valores a 0(para arriba y abajo) auto(para derecha e izquierda) */
+}
+.nav-bg {
+  background-color: var(--secundario);
+}
+/*.navegacion-principal {
+  
+}
+
+/* Especificidad: se utilizan las propiedades del selector mas especifico */
+/*h1.titulo span {  Selector de combinaciones (clase y elemento html)
+  font-size: 2rem;
+  color: blue;
+}
+.titulo span {
+  font-size: 2rem;
+  color: red;
+}
+span {
+  font-size: 2rem;
+  color: green!important; !important salta toda la especificidad (no utilizarlo a menos que sea la ultima opcion)
+}
+
+margin-top: 0;  Separacion hacia arriba
+margin-right: auto; Separacion a la derecha
+margin-bottom: 0; Separacion hacia abajo
+margin-left: auto; Separacion a la izquierda
+margin: 0 auto 0 auto;  Toma los valores en el orden arriba, derecha, abajo, izquierda
+
+display: block; Coloca los elementos uno debajo del otro
+display: inline; Coloca los elementos uno a la derecha del otro
+
+*/
