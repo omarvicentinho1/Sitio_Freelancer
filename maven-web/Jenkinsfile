@@ -14,6 +14,7 @@ pipeline {
     }
     stage('Deploy in Staging Environment') {
       steps {
+	copyArtifacts artifacts: '**/*.war'
 	build job: 'CodePipeline-CD'
       }
     }
