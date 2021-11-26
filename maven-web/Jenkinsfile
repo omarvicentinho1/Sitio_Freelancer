@@ -1,0 +1,29 @@
+pipeline {
+  agent any
+  stages {
+    stage('Buidl Maven Web Project') {
+      steps {
+	sh 'mvn -f maven-web/pom.xml clean package'
+      }
+      post {
+	success {
+	  echo 'Archiving artifact'
+	  archiveArtifacts artifacts: '**/*.war'
+	}
+      }
+    }
+    stage('Deploy in Staging Environment') {
+      steps {
+	build job: 'CodePipeline-CD'
+      }
+    }
+    stage('Deploy to Production Environment') {
+      steps {
+	timeout(time:2, unit:'DAYS') {
+	  input message: 'Approve Production Deployment?'
+	}
+	build job: 'CodePipeline-Prod'
+      }
+    }
+  }
+}
